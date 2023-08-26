@@ -199,7 +199,24 @@ console.log(getTotalGold(sports)) // Output: 23
 
 //
 HTML DOM:
+function render(html) {
+    const an = document.querySelector('ul')
+    an.innerHTML = html;
 
+};
+
+
+// RENDER DUNG MAP HTML 
+var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java']
+
+function render(courses) {
+    const getUl = document.querySelector('ul')
+    const html = courses.map(function(course){
+        return `<li>${course}</li>`
+    })
+    getUl.innerHTML = html.join("")
+}
+console.log(render(courses))
 
 
 
