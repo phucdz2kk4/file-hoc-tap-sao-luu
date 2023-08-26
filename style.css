@@ -1,0 +1,40 @@
+.tittle{
+    color: aqua;
+    font-size: 30px;
+    margin: 10%;
+}
+.box1{
+    text-decoration: underline;
+    margin: 20%;
+} 
+.button-link{
+    color:#333;
+    font-size: 100%;
+    background-color:darkcyan;
+    margin: 20%;
+    padding: 30px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid #333;
+    background-image: url(https://i.pinimg.com/236x/34/20/45/342045874d3046e93576f7e38deddde3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    
+    
+
+    
+    font-weight: 600;
+   
+}
+.button-link:hover{
+    color: darkblue;
+    background-color: yellow;
+    
+    
+
+}
+
+
+
+
+
