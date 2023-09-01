@@ -161,9 +161,42 @@ function run(object) {
         let an = `Thuộc tính ${key} có giá trị ${object[key]}`;
         array.push(an)
     }
-    return cacan;
+    return an;
 }
 console.log(run({ name: 'Nguyen Van A', age: 16 }));
+
+
+// FILTER ( VERY IMPORTANT!!!!!!!!!!!!!!!!! )
+
+const sports = [
+    {
+        name: 'Bóng rổ',
+        like: 6
+    },
+    {
+        name: 'Bơi lội',
+        like: 5
+    },
+    {
+        name: 'Bóng đá',
+        like: 10
+    },
+]
+
+function getMostFavoriteSport(sports){
+    return sports.filter(function(sport){
+        return sport.like > 5;
+    }
+    );
+}
+
+
+// Kỳ vọng
+console.log(getMostFavoriteSport(sports)) 
+// Output: [{ name: 'Bóng rổ, like: 6 }, { name: 'Bóng đá, like: 10 }]
+
+
+
 
 // bai tap su dung reduce
 var sports = [
@@ -198,15 +231,16 @@ function getTotalGold(sports){
 console.log(getTotalGold(sports)) // Output: 23
 
 //
-HTML DOM:
+HTML DOM: lay all kieu template string
 function render(html) {
-    const an = document.querySelector('ul')
-    an.innerHTML = html;
+    const getUl = document.querySelector('ul')
+    getUl.innerHTML = html;
 
 };
 
 
-// RENDER DUNG MAP HTML 
+// RENDER DUNG MAP HTML ( VERY IMPORTANT!!!!!!!!!!!!!!!!! )
+
 var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java']
 
 function render(courses) {
@@ -217,6 +251,62 @@ function render(courses) {
     getUl.innerHTML = html.join("")
 }
 console.log(render(courses))
+
+// OOP: 
+const getButton = document.querySelector('button')
+getButton.onclick = function(){
+    getButton.style.color = '#fff'
+}
+
+// CALL BACK:
+
+// MAP ( tra ve 1 ham`)
+Array.prototype.myMap = function(callback){
+    let result = [];
+    let arrayLength = this.length;
+    for( let i = 0; i < arrayLength; ++i){
+        let an = callback(this[i], i);
+        result.push(an)
+
+    }
+    return result;
+}
+
+// FIlTER ( tra ve 1 ham`)
+Array.prototype.myFilter = function(cb){
+    let res = [];
+    let arrayLength = this.length;
+    for ( let i = 0; i < arrayLength; i++){
+        let temp = cb(this[i],i)
+        if( temp == true ){
+            res.push(this[i],i);
+        }
+        
+    }
+    return res;
+}
+
+// SOME ( TRA VE` KIEU DU LIEU BOOLEAN ) // 1 cai dung thi dung het
+
+Array.prototype.mySome = function(callback){
+    for( let i = 0; i < this.length; i++){
+        let cb = callback(this[i], i);
+        if ( cb == true ) return true;
+    }
+    return false;
+}
+
+// EVERY ( tra ve kieu du lieu boolean) // 1 cai sai thi tat ca sai 
+
+Array.prototype.myEvery = function(cb){
+    for ( let i = 0; i < this.length; i++){
+        let temp = cb ( this[i], i)
+        if (temp == false) return false
+    }
+    return true;
+}
+
+
 
 
 
@@ -291,3 +381,11 @@ const an = 2 > 3 ? "dung roi em" : "sai roi em" // ve 1 auto // toan tu 3 ngoi (
 
 const p = [1,2,3,4, 3, 4, 5,5 ,5, 6, 6 ,7];
 console.log(p[p.length-1]) // mang ggggggg
+
+
+const getInput = document.querySelector('input');
+
+getInput.onchange = function(e){
+    console.log(e);
+
+}

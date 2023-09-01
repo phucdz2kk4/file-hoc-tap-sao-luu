@@ -17,21 +17,26 @@
     box-sizing: border-box;
     border: 2px solid #333;
     background-image: url(https://i.pinimg.com/236x/34/20/45/342045874d3046e93576f7e38deddde3.jpg);
-    background-repeat: no-repeat;
-    background-size: 100px;
-    
-    
-
-    
+    background-size: 354px;
+    text-decoration: none;
+    background-blend-mode: screen;
+    background-repeat: round;
+    border-radius: 50px;
+    position: fixed;
+    width: 140px;
+    bottom: 0;
     font-weight: 600;
    
 }
 .button-link:hover{
     color: darkblue;
-    background-color: yellow;
+    background-color: lightblue;
     
     
 
+}
+.input-js{
+    padding: 100px;
 }
 
 
