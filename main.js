@@ -384,9 +384,9 @@ notHell(1)
 
 ***** PROMISE(CONCEPT) *****
 _Promise có 3 trạng thái:
-    + Pending
-    + Fulfilled
-    + Rejected
+    + Pending  ( xu ly )
+    + Fulfilled ( hoan thanh )
+    + Rejected ( tu choi )
 
 // BAI TAP
 let promise = new Promise( 
