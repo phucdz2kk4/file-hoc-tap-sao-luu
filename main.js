@@ -260,7 +260,7 @@ getButton.onclick = function(){
 
 // CALL BACK:
 
-// MAP ( tra ve 1 ham`)
+// MAP ( tra ve 1 ham`) ( IMPORTANT)
 Array.prototype.myMap = function(callback){
     let result = [];
     let arrayLength = this.length;
@@ -272,7 +272,7 @@ Array.prototype.myMap = function(callback){
     return result;
 }
 
-// FIlTER ( tra ve 1 ham`)
+// FIlTER ( tra ve 1 ham`) ( IMPORTANT)
 Array.prototype.myFilter = function(cb){
     let res = [];
     let arrayLength = this.length;
@@ -286,7 +286,7 @@ Array.prototype.myFilter = function(cb){
     return res;
 }
 
-// SOME ( TRA VE` KIEU DU LIEU BOOLEAN ) // 1 cai dung thi dung het
+// SOME ( TRA VE` KIEU DU LIEU BOOLEAN ) // 1 cai dung thi dung het ( IMPORTANT)
 
 Array.prototype.mySome = function(callback){
     for( let i = 0; i < this.length; i++){
@@ -307,15 +307,111 @@ Array.prototype.myEvery = function(cb){
 }
 
 
+*************************** PROMISE ********************************
+( // SYNC, ASYNC ( is mean setTimeout là tác vụ bất động bộ (async))
+// sync (Đây là tác vụ đồng bộ (sync))
+ 
+EXAMPLE:
+
+setTimeout(function() {
+    console.log('Dòng này sẽ in ra sau')
+}, 0)
+
+// setTimeout là tác vụ bất động bộ (async)
+console.log('Dòng này sẽ in ra trước') // Đây là tác vụ đồng bộ (sync)
 
 
 
+// CALLBACK HELL 
+_ EXAMPLE:
+
+setTimeout = function (){
+    console.log(1)
+    setTimeout = function (){
+        console.log(2)
+        setTimeout = function (){
+            console.log(3)
+            setTimeout = function (){
+                console.log(4)
+                setTimeout = function (){
+                    console.log(5)
+                    setTimeout = function (){
+                        console.log(6)   
+                    , 1000}   
+                , 1000}   
+            , 1000}   
+        , 1000}   
+    , 1000}   
+, 1000}
+
+************************** BAI TAP CALLBACK ( TRONG HUYEN THOAI ) **************************
+function hell(value, cb) {
+    cb(value);
+}
+
+// Không sử dụng Promise dẫn đến tạo ra callback hell 
+hell(1, function (valueFromA) {
+    hell(valueFromA + 1, function (valueFromB) {
+        hell(valueFromB + 1, function (valueFromC) {
+            hell(valueFromC + 1, function (valueFromD) {
+                console.log(valueFromD + 1);
+            });
+        });
+    });
+});
+
+// Sử dụng Promise sẽ tạo ra đoạn code dễ đọc hơn và vẫn đảm bảo đúng logic
+function notHell(value) {
+    return new Promise(function (resolve) {
+        resolve(value);
+    });
+}
+
+notHell(1)
+    .then(function (value) {
+        return value + 1;
+    })
+    .then(function (value) {
+        return value + 1;
+    })
+    .then(function (value) {
+        return value + 1;
+    })
+    .then(function (value) {
+        console.log(value + 1);
+    });
 
 
+***** PROMISE(CONCEPT) *****
+_Promise có 3 trạng thái:
+    + Pending
+    + Fulfilled
+    + Rejected
 
+// BAI TAP
+let promise = new Promise( 
+    function( resolve, reject ){
+        
+    }
+)
+promise
+    .then(function(){
+        console.log ('dung')
+})
+    .catch(function(){
+        console.log('sai')  
+}) 
+    .finally(function(){
+        console.log('done')
+})
 
-    
-    
+// resolve: thanh cong thi se chay vao then va finally //
+// reject: that bai cung se tra ve finally va catch //
+++ API ( URL ) ==> Application programing interface
+// Backend --> API --> Fetch --> JSON
+
+++ Fetch tra ve promise
+
 
 */
 // khai bao bien
@@ -347,8 +443,6 @@ const myObject = {
     hobby: ' suck the dick',
     age: 18,
     sex: 'boiz',
-    
-    
 
 }
 console.log(myObject);
@@ -358,7 +452,6 @@ const myArray = [
 ];
 
 console.log(myArray.join('-'));
-
 
 
 console.log(Boolean(0));
@@ -389,3 +482,23 @@ getInput.onchange = function(e){
     console.log(e);
 
 }
+
+
+setTimeout = function (){
+    console.log(1)
+    setTimeout = function (){
+        console.log(2)
+        setTimeout = function (){
+            console.log(3)
+            setTimeout = function (){
+                console.log(4)
+                setTimeout = function (){
+                    console.log(5)
+                    setTimeout = function (){
+                        console.log(6)   
+                    , 6000}   
+                , 5000}   
+            , 4000}   
+        , 3000}   
+    , 2000}   
+, 1000}
