@@ -408,9 +408,43 @@ promise
 // resolve: thanh cong thi se chay vao then va finally //
 // reject: that bai cung se tra ve finally va catch //
 ++ API ( URL ) ==> Application programing interface
+
 // Backend --> API --> Fetch --> JSON
 
 ++ Fetch tra ve promise
+
+
+***************************** ECMASCRIPT 6 ********************************
+
+++ Cach dung class trong es6:
+
+class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+}
+// Expected results
+const person = new Person('Long', 22);
+console.log(`Tên: ${person.name}, tuổi: ${person.age}`);
+// Output: 'Tên: Long, tuổi: 22'
+
+
+++ ARROW FUNCTION
+let sum = (a, b) => a + b;
+
+// Expected results
+console.log(sum(1, 2)) // Output: 3
+console.log(sum(2, 2)) // Output: 4
+
+
+
+
+
+
+
+
+
 
 
 */
@@ -502,3 +536,10 @@ setTimeout = function (){
         , 3000}   
     , 2000}   
 , 1000}
+
+const lines = 'line 1\n'
+    + 'line 2\n'
+    + 'line 3\n'
+    + 'line 4\n'    
+    + 'line 5\n'
+    console.log(lines)
