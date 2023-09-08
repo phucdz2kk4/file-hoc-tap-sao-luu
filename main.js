@@ -433,6 +433,41 @@ console.log(`Tên: ${person.name}, tuổi: ${person.age}`);
 ++ ARROW FUNCTION
 let sum = (a, b) => a + b;
 
+++ TOAN TU DESTRUCTURING : 
++ lay ra 1 hay nhieu phan tu co trong mang
++ lay ra 1 hay nhieu phan tu co trong object
+
+_EXAMPLES: 
+var array = [Javascript, C++, Python , Ruby]
+var [a,b,c,d] = array
+console.log(a,b,c,d)
+
+
+++ TOAN TU REST : 
++ lay ra phan tu con lai cua mang
+
+EXAMPLES:
+var array = [Javascript, C++, Python , Ruby]
+var [a,b, ...rest] = array
+console.log(rest)
+
+++ TOAN TU DESTRUCTURING: goi ra 1 object
+EXAMPLES:
+
+var course = {
+    name: JavaScript
+    price: 1000
+}
+var {name, price} = course
+
+console.log(name, price)
+
+
+
+
+
+
+
 // Expected results
 console.log(sum(1, 2)) // Output: 3
 console.log(sum(2, 2)) // Output: 4
