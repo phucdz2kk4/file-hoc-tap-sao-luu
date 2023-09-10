@@ -3,100 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> web pỏn </title>
-
+    <title> Music </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="https://live-production.wcms.abc-cdn.net.au/a362273509f7eccdcf362bb73b3b006d?impolicy=wcms_crop_resize&cropH=788&cropW=1400&xPos=0&yPos=0&width=862&height=485">
 </head>
 <body>
-    <div class="box1">
-        <h3 class="tittle" title="is that"> Trước hết bạn phải tin tuôi </h3> 
-        <!--
-            internal: su dung cap file trong the style
-            external: su dung file roi link vao 
-            inline: viet vao trong the mo trong attribute style
-            cach de lien ket css <link rel="stylesheet" href="main.css">
-            cach de lien ket script <script src="./main.js">
-            * la ap dung tat ca css len html
-            .class.class
-            .element .element
-            .element ~ .element: tru dau
-            .element + .element: tru cuoi
-            .class, .class: liet ke cac the can css
-            .element, .class : liet ke cac the can css
-            .element > .element : the truoc la bo cua the con
-            inline( style )  > id > class > tag
-            ket hop the > the
-            the giong nhau thi uu tien cai o duoi
-            * va the cha diem = 0 < tag diem = 1 ( the inline = 100, id = 10)
-            !important = 1000 diem
-            :root{--text-color: #3333;}:
-                h1{
-                    color:  var(--heading-color);
-                }
-            :hover:nhieu mau`
-            :active: 
+    <div class="player">
+        <div class="dashboard">
+            <div class="header">
+                <div class="head">
+                    <h4> Now playing: </h4>
+                    <h2> Past Lives </h2>
+                </div>
+                <div class="cd">
+                    <div class="cd-img" style="background-image: url(https://avatar-ex-swe.nixcdn.com/song/2023/02/06/8/d/a/c/1675677090111_640.jpg); opacity: 1;"></div>
+                </div>
+            </div>
+            <div class="tool">
+                <div class="btn btn-repeat"> <i class="fas fa-redo"></i> </div>
+                <div class="btn btn-prv"> <i class="fas fa-step-backward"></i> </div>
+                <div class="btn btn-play"> <i class="fas fa-play icon-play"></i> </div>
+                <div class="btn btn-next"> <i class="fas fa-step-forward"></i> </div>
+                <div class="btn btn-random"> <i class="fas fa-random"></i> </div>
+                <div class="volume"><i class="fas fa-volume-up show-volume"></i></div>
+            </div>
+                <input type="range" class="progress" value="0" step="1" min="0" max="100">
+                <audio src="" class="audio"></audio>
             
-            1rem = the html
-            1em phu thuoc vao the gan nhat
-            vh - width, 
-            vw - height
-            css function: rgb() pha mau`
-            calc(); 
-            web giả: 
-            something::after {
-                content: "(" attr(href)")";
-                content: fuck you;
-            ::before
-            ::after
-            ::first-letter
-            ::first-line
-           
-
-            }
--->
-        <p>
-        dùng cách này là hợp lý nhất tính đến thời điểm hiện tại
-       
-
-
-        </p>
-        <br>
-        
-
-        <a class="button-link" href="https://medlatec.vn/tin-tuc/mach-nho-anh-em-meo-tang-kich-thuoc-duong-vat-tai-nha-cuc-de-s78-n26231"> Bấm vào đây để tăng kích cỡ dương vật  </a> </button>
-        
-        
-        
-        <br>   
-        <div class="input-js">
-            <input type="text">
-            <input type="checkbox">
-
-
-            <select>
-                <option value="value 1">1</option>
-                <option value="value 2">2</option>
-                <option value="value 3">3</option>
-            </select>
         </div>
-
-
-
-
-       
+        <div class="play-list">
+            <div class="song active" index="0">
+                <div class="thumb" style="background-image: url(https://avatar-ex-swe.nixcdn.com/song/2023/02/06/8/d/a/c/1675677090111_640.jpg)"></div>
+                <div class="title">
+                    <h3 class="name-song"> Past Lives </h3>
+                    <p class="author"> BØRNS </p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+        </div>    
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="main.js">
 
 </script>
 
 
-        
-       
-
-    
-    
-    
-
+</body>
 
 </html>
